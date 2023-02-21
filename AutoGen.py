@@ -6,7 +6,7 @@ out_path = './output'
 
 def write_text(title,subtitle, out):
     if len(title) > 13:
-        titlefont = ImageFont.truetype(f'{resources_path}/qfont.ttf', 80)
+        titlefont = ImageFont.truetype(f'{resources_path}/qfont.ttf', 90)
     else:
         titlefont = ImageFont.truetype(f'{resources_path}/qfont.ttf', 110)
     subfont = ImageFont.truetype(f'{resources_path}/qfont.ttf', 40)
@@ -15,7 +15,7 @@ def write_text(title,subtitle, out):
     w, h = img.size
     text_w, text_h = draw.textsize(title, font=titlefont)
     position = ((w - text_w) / 2, (h - text_h) / 2-50)
-    draw.text(position, title, font=titlefont, fill=(255, 255, 255))
+    draw.text(position, title, font=titlefont, fill=(112, 157, 255))
     #subtitle
     text_w, text_h = draw.textsize(subtitle, font=subfont)
     position = ((w - text_w) / 2, (h - text_h) / 2+50)
